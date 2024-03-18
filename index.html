@@ -14,18 +14,26 @@
           <img :src="logo" alt="logo" />
         </div>
         <div class="add">
-          <input type="text" placeholder="New Task" />
-          <button>Aggiungi</button>
+          <input
+            @keyup.enter="createTask"
+            type="text"
+            placeholder="New Task"
+            v-model.trim="newString"
+          />
+          <button @click="createTask">Add</button>
         </div>
-
+        <p class="error" v-if="errorString">{{errorString}}</p>
+        <p class="success" v-else>Task added successfully!</p>
         <div class="list">
           <ul>
-            <li></li>
+            <li v-for="(task, index) in tasks" class="task">
+              <span>{{task.text}}</span>
+              <button @click="deleteTask(index)">Delete</button>
+              <input type="checkbox" @click="setTask(task)" />
+            </li>
           </ul>
         </div>
-      </div>
-    </div>
-
+        
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
