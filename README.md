@@ -29,12 +29,6 @@ Bonus:
 - **Delete Task**: Users can delete tasks from the list.
 - **Mark as Complete**: Users can mark tasks as complete by checking them off.
 
-### How to Use
-
-- **Adding a Task**: Type the new task in the input field labeled "New Task" and press the "Add" button.
-- **Deleting a Task**: Click on the "X" button next to the task you want to delete.
-- **Completing a Task**: Check the checkbox next to the task to mark it as complete.
-
 # Tools
 
 -**v-for**: The `v-for="(task, index) directive in tasks"` is used to iterate on the `tasks` array and dynamically create a `<li>` element for each array element. Each item in the list represents a task to do.
